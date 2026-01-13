@@ -12,10 +12,14 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
-        var array = new double[length]; // Create an array of the specified length
-        for (int i = 0; i < length; i++) // Loop through each index of the array
+
+        // Create an array of the specified length
+        var array = new double[length];
+        // Loop through each index of the array
+        for (int i = 0; i < length; i++)
         {
-            array[i] = number * (i + 1); // Calculate the multiple and assign it to the array
+            // Calculate the multiple and assign it to the array
+            array[i] = number * (i + 1);
         }
 
         return array; // replace this return statement with your own
@@ -34,12 +38,18 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
-        int count = data.Count; // Get the number of elements in the list
-        amount = amount % count; // In case amount is greater than count
-        if (amount == 0) return; // No rotation needed
+        // Get the number of elements in the list
+        int count = data.Count;
+        // In case amount is greater than count
+        amount = amount % count;
+        // No rotation needed
+        if (amount == 0) return;
+
         var temp = data.GetRange(count - amount, amount);
-        data.RemoveRange(count - amount, amount); // Remove the last 'amount' elements
-        data.InsertRange(0, temp); // Insert them at the beginning
+        // Remove the last 'amount' elements
+        data.RemoveRange(count - amount, amount);
+        // Insert them at the beginning
+        data.InsertRange(0, temp);
 
     }
 }
