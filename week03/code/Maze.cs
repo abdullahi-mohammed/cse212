@@ -85,6 +85,7 @@ public class Maze
     public void MoveDown()
     {
         // FILL IN CODE
+
         if (_mazeMap[(_currX, _currY)][3])
         {
             _currY += 1;
